@@ -1,0 +1,77 @@
+body {
+  background-image: url('../images/kat.jpg');
+  background-repeat: no-repeat;
+  background-color: rgb(112,191,184);
+  margin: 2em 0 0 2em;
+  font-family: helvetica, sans-serif;
+  font-size: 1em;
+}
+
+h1 {font-size: 1.5em;}
+
+button, .button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: .8em;
+}
+
+button:hover, .button:hover {
+  background-color: lightblue;
+}
+
+.button2 {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: .8em;
+  font-size: 1em;
+}
+
+.button2:hover {
+  color: red;
+}
+
+/* bron */
+/* https://nl.pinterest.com/pin/577445983451635783/ */
+
+.kat {
+  background-image: url('../images/kat.jpg');
+  background-color: rgb(112,191,184);
+}
+
+.btnKat1 {
+  background-image: url('../images/kat-wacht.gif');
+}
+
+.btnKat2 {
+  background-image: url('../images/kat-voeren2.gif');
+}
+
+/* bron
+https://nl.pinterest.com/pin/577445983467721961/ */
+
+.hond {
+  background-image: url('../images/hond.jpg');
+  background-color: rgb(232,231,221);
+}
+
+.btnHond1 {
+  background-image: url('../images/hond.gif');
+  background-color: rgb(232,231,221);
+}
+
+/* .btnHond2 {
+  background-image: url('');
+  background-color: rgb(232,231,221);
+} */
+
+#section2 {
+  display: none;
+}
