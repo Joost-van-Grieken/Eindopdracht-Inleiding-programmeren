@@ -5,7 +5,7 @@ var latenWachtenKnop = document.querySelector('#btnKat1');
 var voerenKnopKat = document.querySelector('#btnKat2');
 var roepenKnop = document.querySelector('#btnHond1');
 
-// wisselen van dier en uitvoeringen.
+// wisselen van dier en uitvoeringen: Door op een van deze events te klikken voegt het een class aan de body en haalt het de overige weg.
 katKnop.addEventListener('click', () => {
   document.body.classList.add('kat');
   document.body.classList.remove('hond');
@@ -52,19 +52,11 @@ roepenKnop.addEventListener('click', () => {
 // https://stackoverflow.com/questions/25028853/addeventlistener-two-functions
 
 // Knoppen om de uitvoeringen te doen. Elk dier heeft zijn eigen uitvoering. De uitvoering switchen aan de hand van welke dier in beeld is.
+// Het zoekt de section die verstopt moet worden en verandert de display naar none.
 function hideSection1() {
   var HideS1 = document.getElementById('section1');
   if (HideS1.style.display === '', 'none') {
     HideS1.style.display = 'none';
-  } else {
-
-  }
-}
-
-function showSection2() {
-  var ShowS2 = document.getElementById('section2');
-  if (ShowS2.style.display === '', 'none') {
-    ShowS2.style.display = 'block';
   } else {
 
   }
@@ -79,6 +71,8 @@ function hideSection2() {
   }
 }
 
+// Hier zoekt het de section die vertoond moet worden. Wanneer de display op 'none' of '' staat, verandeert het naar block om het weer te geven.
+// Else heb ik leeg gelaten, omdat dat ervoor zou zorgen dat de hond knop de functies van de kat kon oproepen. Dat is niet de bedoeling.
 function showSection1() {
   var ShowS1 = document.getElementById('section1');
   if (ShowS1.style.display === '', 'none') {
@@ -88,7 +82,17 @@ function showSection1() {
   }
 }
 
-//nog een event listener toegevoegd zodat het de hierboven genoemde functies kan uitvoeren.
+function showSection2() {
+  var ShowS2 = document.getElementById('section2');
+  if (ShowS2.style.display === '', 'none') {
+    ShowS2.style.display = 'block';
+  } else {
+
+  }
+}
+
+// Nog een event listener toegevoegd zodat het de hierboven genoemde functies kan uitvoeren.
+// Bij het klikken op de knop voert het twee functies uit: verstoppen en weergegevn.
 katKnop.addEventListener('click', () => {
   hideSection2();
   showSection1();
@@ -100,9 +104,9 @@ hondKnop.addEventListener('click', () => {
 });
 
 
-//bron:
-//https://stackoverflow.com/questions/9186346/javascript-onclick-increment-number
-//dit is voor de blijheid teller van de hond. hoe vaker je haar roept, hoevaker ze haar staart zwaait.
+// bron:
+// https://stackoverflow.com/questions/9186346/javascript-onclick-increment-number
+// Het zorgt ervoor dat het de nummer 0 leest en toeneemt met 1 bij elke klik op de knop.
 var SZH = document.getElementById("SZH");
 var staartZwaaiHond;
 var blijheidHond;
